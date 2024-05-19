@@ -6,7 +6,8 @@ int main(int argc, char *argv[]) {
 	printf("baslangic ve bitis degerini sirasiyla giriniz:");
 	scanf("%d%d",&baslangic,&bitis);
 	for(i=baslangic+1;i<bitis;i++)
-	{  for(j=2;j<(gecici=i)&&bayrak==1;j++)
+	{  gecici=i;
+           for(j=2;j<gecici&&bayrak==1;j++)
 	   {  if((i%j)==0)
 	      bayrak=0;
 	      else
