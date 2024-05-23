@@ -1,19 +1,16 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <math.h>
 
 int main(int argc, char *argv[]) {
-	int baslangic,bitis,i,j,bayrak=1,gecici;
+	int baslangic,bitis,i,j,bayrak=1;
 	printf("baslangic ve bitis degerini sirasiyla giriniz:");
 	scanf("%d%d",&baslangic,&bitis);
 	for(i=baslangic+1;i<bitis;i++)
-	{  gecici=i;
-           for(j=2;j<gecici&&bayrak==1;j++)
+	{  
+	   for(j=2;j<=sqrt(i)&&bayrak==1;j++)
 	   {  if((i%j)==0)
 	      bayrak=0;
-	      else
-	      gecici=gecici/j;
-	      
-	   }
+	    }
 	   if(bayrak==1&&i!=1)
 	   printf("%d ",i);
 	   bayrak=1;
